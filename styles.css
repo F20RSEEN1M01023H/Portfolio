@@ -3,6 +3,13 @@ body {
   font-family: "Yeseva One", serif;
   overflow-x: hidden;
 }
+  @media only screen and (max-width: 768px){
+    html,
+    body{
+    width:100%;
+    overflow-x:hidden;
+    }
+}
 .navbar {
   background-color: rgb(18, 19, 31);
   padding: 0.5rem 1rem;
