@@ -52,8 +52,11 @@ body {
 }
 
 .effect {
-  font-size: 17px;
+  font-size: 23px;
   color: white;
+  padding: 3px 7px 3px 7px ;
+  outline: 1px solid white;
+  border-radius: 10px;
 }
 
 .effect:hover {
@@ -374,6 +377,7 @@ body {
 }
 #recent-projects {
   background-color: rgb(18, 19, 31);
+  height: 800px;
   /* padding: 40px 0; */
 }
 
@@ -444,12 +448,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 2px solid rgb(39, 210, 213); /* Teal color border */
   border-radius: 50%;
   color: rgb(39, 210, 213); /* Initial color */
-  font-size: 28px;
+  font-size: 25px;
 
   /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
@@ -460,6 +464,89 @@ body {
   border-color: rgb(39, 210, 213); 
   text-decoration: none;
 }
+
+/*  Here is my contact form css  */
+
+#contact {
+  background-color: rgb(18, 19, 31);
+  padding: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.S-col {
+  border: 4px solid rgb(39, 210, 213);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: left;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  background-color: rgb(25, 26, 39);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.S-col:hover {
+  transform: scale(1.05);
+}
+
+.form-control {
+  background-color: rgb(25, 26, 39);
+  color: white;
+  border: 1px solid rgb(39, 210, 213);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.form-control:focus {
+  background-color: rgb(25, 26, 39);
+  color: white;
+  border-color: rgb(39, 210, 213);
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: rgba(200, 200, 200, 0.1);
+}
+
+.btn-outline-light {
+  color: rgb(39, 210, 213);
+  border-color: rgb(39, 210, 213);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  background-color: rgb(39, 210, 213);
+  color: #000;
+}
+/* Style for autofill when input is filled */
+input:-webkit-autofill {
+  border: 1px solid rgb(39, 210, 213) !important; 
+  box-shadow: 0 0 0px 1000px rgb(25, 26, 39) inset !important; 
+  -webkit-text-fill-color: white !important; 
+}
+
+/* Remove default autofill styles on focus */
+/* input:-webkit-autofill:focus {
+  background-color: rgb(25, 26, 39) !important;
+  box-shadow: 0 0 0px 1000px rgb(25, 26, 39) inset !important;
+  -webkit-text-fill-color: white !important;
+} */
+
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px;
+    height: auto;
+  }
+
+  .S-col {
+    padding: 20px;
+  }
+}
+
+
 
 /* .icon-button i {
   transition: color 0.3s;
