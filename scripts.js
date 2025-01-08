@@ -30,7 +30,7 @@ document.getElementById('showbtn').addEventListener('click', function() {
 });
 
 
-
+emailjs.init("wF9YbVyULuP2YfDhZ");
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form from submitting traditionally
   
