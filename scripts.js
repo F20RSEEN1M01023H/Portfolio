@@ -29,42 +29,41 @@ document.getElementById('showbtn').addEventListener('click', function() {
     }
 });
 
-
 emailjs.init("wF9YbVyULuP2YfDhZ");
+
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from submitting traditionally
-  
-    var fullName = document.getElementById("fullName").value.trim();
-    var email = document.getElementById("email_id").value.trim();
-    var phone = document.getElementById("phone").value.trim();
-    var message = document.getElementById("message").value.trim();
-  
-    // Validate fields
-    if (!fullName || !email || !message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-  
-    // Email.js parameters
-    var params = {
-      from_name: fullName,
-      email_id: email,
-      phone: phone,
-      message: message,
-    };
-  
-    // Sending email via Email.js
-    emailjs
-      .send("service_ifzbsx9", "template_6vh2f2c", params)
-      .then(
-        function (response) {
-          alert("Message sent successfully!");
-          document.getElementById("contactForm").reset(); // Clear form fields
-        },
-        function (error) {
-          console.error("Failed to send message:", error);
-          alert("Failed to send message. Please try again later.");
-        }
-      );
-  });
-  
+  event.preventDefault(); // Prevent form from submitting traditionally
+
+  var fullName = document.getElementById("fullName").value.trim();
+  var email = document.getElementById("email_id").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var message = document.getElementById("message").value.trim();
+
+  // Validate fields
+  if (!fullName || !email || !message) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  // Email.js parameters
+  var params = {
+    from_name: fullName, // User's name as the sender
+    email_id: email,     // User's email
+    phone: phone,        // User's phone (optional)
+    message: message,    // User's message
+  };
+
+  // Sending email via Email.js
+  emailjs
+    .send("service_ifzbsx9", "template_6vh2f2c", params)
+    .then(
+      function (response) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset(); // Clear form fields
+      },
+      function (error) {
+        console.error("Failed to send message:", error);
+        alert("Failed to send message. Please try again later.");
+      }
+    );
+});
