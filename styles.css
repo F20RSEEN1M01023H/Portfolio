@@ -375,45 +375,93 @@ body {
     opacity: 1;
   }
 }
+/* Section Background */
 #recent-projects {
   background-color: rgb(18, 19, 31);
-  height: auto;
-  /* padding: 40px 0; */
+  padding: 50px 0;
+}
+
+/* Project Card Container */
+.project-card {
+  background-color: rgb(28, 30, 40);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgb(39, 210, 213); /* Border to touch without gaps */
+}
+
+/* Adjust Grid to Remove Gaps */
+.row {
+  margin: 0; /* Remove default margins */
 }
 
 .scol {
-  border: 4px solid rgb(39, 210, 213);
-  border-radius: 8px;
-  padding: 20px;
+  padding: 0; /* Remove padding from columns */
+}
+
+/* Image Container */
+.project-image {
+  height: 200px; /* Fixed height for images */
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  transform: translateY(0);
+  transition: transform 2s ease-in-out;
+}
+
+.project-card:hover .project-image img {
+  transform: translateY(-60%); /* Moves the image upward on hover */
+}
+
+/* Content Below Image */
+.project-content {
+  padding: 15px;
   text-align: center;
-  transition: 0.3s;
-  margin-bottom: 30px;
 }
 
-.scol:hover {
-  transform: scale(1.05);
-}
-
-.btn-outline-light {
+.project-content h5 {
+  font-size: 1.2rem;
   color: rgb(39, 210, 213);
-  border-color: rgb(39, 210, 213);
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: rgb(200, 200, 200);
+  margin-bottom: 15px;
+}
+
+.project-content .btn {
+  color: rgb(39, 210, 213);
+  border: 1px solid rgb(39, 210, 213);
   transition: background-color 0.3s ease-in-out;
 }
 
-.btn-outline-light:hover {
+.project-content .btn:hover {
   background-color: rgb(39, 210, 213);
-  color: #000;
+  color: black;
 }
 
-.row {
-  margin-top: 20px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-image {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
 
-@media (max-width: 767.98px) {
-  .scol {
-    padding: 15px;
+  .project-content h5 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.8rem;
   }
 }
+
 
 #footer {
   background-color: rgb(18, 19, 31);
