@@ -613,6 +613,7 @@ body {
   color: rgb(39, 210, 213);
   /* Initial color */
   font-size: 25px;
+  background-color:rgb(18, 19, 31) ;
 
   /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
