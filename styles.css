@@ -3,6 +3,89 @@ body {
   font-family: "Yeseva One", serif;
   overflow-x: hidden;
 }
+
+/* Preloader Full-Screen Background */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(18, 19, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Centering Preloader Content */
+.preloader-content {
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.profile-pic {
+  width: 80px;
+  /* Adjust size */
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #27d2d5;
+  /* Add a border around the picture */
+  margin-bottom: 15px;
+  object-fit: cover;
+  /* Ensures the image remains well-proportioned */
+}
+
+/* Message Text Styling */
+.preloader-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #27d2d5;
+}
+
+/* Loader Container */
+.loader {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Bouncing Balls Animation */
+.ball {
+  width: 15px;
+  height: 15px;
+  background-color: #27d2d5;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite ease-in-out;
+}
+
+/* Animations */
+.ball:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+}
+
+
 .navbar {
   background-color: rgb(18, 19, 31);
   padding: 0.5rem 1rem;
@@ -10,14 +93,16 @@ body {
   position: sticky;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
-  @media only screen and (max-width: 768px){
-    html,
-    body{
-    width:100%;
-    overflow-x:hidden;
-    }
+@media only screen and (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 
@@ -32,6 +117,7 @@ body {
   color: rgb(249, 133, 10);
   text-shadow: 2px 2px 10px rgba(62, 187, 198, 1);
 }
+
 .c {
   color: #3ebbc6;
 }
@@ -46,6 +132,7 @@ body {
   color: white;
 
 }
+
 .nav-link:hover {
   text-shadow: 0px 0px 10px rgba(62, 187, 198, 1);
   color: rgb(39, 210, 213);
@@ -54,7 +141,7 @@ body {
 .effect {
   font-size: 23px;
   color: white;
-  padding: 3px 7px 3px 7px ;
+  padding: 3px 7px 3px 7px;
   outline: 1px solid white;
   border-radius: 10px;
 }
@@ -96,12 +183,18 @@ body {
 .intro {
   border-radius: 50%;
   border: 4px solid rgb(39, 210, 213);
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Ensure it's treated as a block-level element for margin auto to work */
-  max-width: 100%; /* Ensure the image is responsive */
-  width: 400px; /* Set a fixed width or adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 1; /* Ensure it's visible */
+  margin: 0 auto;
+  /* Center the image horizontally */
+  display: block;
+  /* Ensure it's treated as a block-level element for margin auto to work */
+  max-width: 100%;
+  /* Ensure the image is responsive */
+  width: 400px;
+  /* Set a fixed width or adjust as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  z-index: 1;
+  /* Ensure it's visible */
   box-shadow: 5px 5px 30px 10px rgb(39, 210, 213);
   transition: 0.3s;
 }
@@ -114,11 +207,11 @@ body {
 #home {
   background-color: rgb(18, 19, 31);
   color: #fff;
-  padding: 2rem 0; /* Adjust padding as needed */
-  min-height: 80vh; /* Minimum height to ensure content fits on smaller screens */
+  padding: 2rem 0;
+  min-height: 80vh;
   display: flex;
-  align-items: center; /* Center content vertically */
-  /* justify-content: center; Center content horizontally */
+  align-items: center;
+  /* justify-content:*/
   /* text-align: center; */
 }
 
@@ -128,31 +221,32 @@ body {
 
 /* Responsive image */
 .intro {
-  max-width: 100%; /* Ensure the image scales down */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
 /* Adjust column layout for smaller screens */
 @media (max-width: 768px) {
   .row {
-    flex-direction: column; /* Stack columns vertically */
-    text-align: center; /* Center text in columns */
+    flex-direction: column;
+    text-align: center;
   }
+
   .col-6 {
-    margin-bottom: 20px; /* Add space between columns */
+    margin-bottom: 20px;
   }
 }
 
 /* About Section */
 #about {
   background-color: rgb(18, 19, 31);
-  padding: 2rem 0; /* Adjust padding as needed */
-  min-height: 70vh; /* Minimum height for smaller screens */
+  padding: 2rem 0;
+  min-height: 70vh;
 }
 
 .about {
   font-size: 2.5rem;
-  font-weight: bold; /* Adjust font size for smaller screens */
+  font-weight: bold;
 }
 
 
@@ -161,8 +255,8 @@ body {
   border: 4px solid rgb(39, 210, 213);
   box-shadow: 5px 5px 30px 10px rgb(39, 210, 213);
   transition: 0.3s;
-  width: 70%; /* Adjust this value to make the image smaller */
-  max-width: 200px; /* Optional: set a max-width to prevent the image from becoming too large */
+  width: 70%;
+  max-width: 200px;
 }
 
 .txt {
@@ -172,8 +266,8 @@ body {
 
 @media (max-width: 767.98px) {
   .small {
-    width: 80%; /* Adjust for smaller screens */
-    max-width: 150px; /* Optional: adjust for smaller screens */
+    width: 80%;
+    max-width: 150px;
   }
 
   .about {
@@ -260,7 +354,8 @@ body {
   }
 
   .simg {
-    margin-bottom: 1.5rem; /* Adds spacing between image and content on smaller screens */
+    margin-bottom: 1.5rem;
+    /* Adds spacing between image and content on smaller screens */
   }
 
   .about {
@@ -271,8 +366,9 @@ body {
     height: 10px;
   } */
 
-  .row > .col-4 {
-    font-size: 1rem; /* Adjust skill names font size */
+  .row>.col-4 {
+    font-size: 1rem;
+    /* Adjust skill names font size */
   }
 }
 
@@ -281,7 +377,7 @@ body {
     font-size: 1.8rem;
   }
 
-  .row > .col-4 {
+  .row>.col-4 {
     font-size: 0.9rem;
   }
 }
@@ -345,6 +441,7 @@ body {
   color: #27d2d5 !important;
 }
 
+
 /* Animation Effects */
 [data-aos="zoom-in"] {
   animation: zoomIn 1s ease forwards;
@@ -359,6 +456,7 @@ body {
     transform: scale(0.5);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -370,11 +468,13 @@ body {
     transform: translateY(20px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 /* Section Background */
 #recent-projects {
   background-color: rgb(18, 19, 31);
@@ -388,21 +488,25 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
-  border: 1px solid rgb(39, 210, 213); /* Border to touch without gaps */
+  border: 1px solid rgb(39, 210, 213);
+  /* Border to touch without gaps */
 }
 
 /* Adjust Grid to Remove Gaps */
 .row {
-  margin: 0; /* Remove default margins */
+  margin: 0;
+  /* Remove default margins */
 }
 
 .scol {
-  padding: 0; /* Remove padding from columns */
+  padding: 0;
+  /* Remove padding from columns */
 }
 
 /* Image Container */
 .project-image {
-  height: 200px; /* Fixed height for images */
+  height: 200px;
+  /* Fixed height for images */
   overflow: hidden;
   position: relative;
 }
@@ -415,7 +519,8 @@ body {
 }
 
 .project-card:hover .project-image img {
-  transform: translateY(-60%); /* Moves the image upward on hover */
+  transform: translateY(-60%);
+  /* Moves the image upward on hover */
 }
 
 /* Content Below Image */
@@ -450,7 +555,8 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-image {
-    height: 150px; /* Adjust image height for smaller screens */
+    height: 150px;
+    /* Adjust image height for smaller screens */
   }
 
   .project-content h5 {
@@ -469,15 +575,18 @@ body {
 }
 
 #footer h5 {
-  font-size: 1rem; /* Responsive font size */
+  font-size: 1rem;
+  /* Responsive font size */
   margin: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 576px) {
   #footer h5 {
-    font-size: 0.875rem; /* Slightly smaller font on very small screens */
-    padding: 10px; /* Adjust padding for small screens */
+    font-size: 0.875rem;
+    /* Slightly smaller font on very small screens */
+    padding: 10px;
+    /* Adjust padding for small screens */
   }
 }
 
@@ -498,18 +607,20 @@ body {
   justify-content: center;
   width: 50px;
   height: 50px;
-  border: 2px solid rgb(39, 210, 213); /* Teal color border */
+  border: 2px solid rgb(39, 210, 213);
+  /* Teal color border */
   border-radius: 50%;
-  color: rgb(39, 210, 213); /* Initial color */
+  color: rgb(39, 210, 213);
+  /* Initial color */
   font-size: 25px;
 
   /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
 
 .icon-button:hover {
-  background-color: rgb(18, 19, 31); 
-  color: rgb(255, 255, 255); 
-  border-color: rgb(39, 210, 213); 
+  background-color: rgb(18, 19, 31);
+  color: rgb(255, 255, 255);
+  border-color: rgb(39, 210, 213);
   text-decoration: none;
 }
 
@@ -568,11 +679,12 @@ body {
   background-color: rgb(39, 210, 213);
   color: #000;
 }
+
 /* Style for autofill when input is filled */
 input:-webkit-autofill {
-  border: 1px solid rgb(39, 210, 213) !important; 
-  box-shadow: 0 0 0px 1000px rgb(25, 26, 39) inset !important; 
-  -webkit-text-fill-color: white !important; 
+  border: 1px solid rgb(39, 210, 213) !important;
+  box-shadow: 0 0 0px 1000px rgb(25, 26, 39) inset !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* Remove default autofill styles on focus */
@@ -611,16 +723,3 @@ input:-webkit-autofill {
   background-color: #25D366;
   border-color: #25D366; 
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-

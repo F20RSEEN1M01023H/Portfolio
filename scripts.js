@@ -67,3 +67,15 @@ document.getElementById("contactForm").addEventListener("submit", function (even
       }
     );
 });
+
+// Pre-loader  
+window.addEventListener("load", function() {
+  let preloader = document.getElementById("preloader");
+  setTimeout(() => {
+      preloader.style.opacity = "0"; 
+      setTimeout(() => {
+          preloader.style.display = "none"; 
+      }, 500); 
+  }, 3000); 
+});
+
