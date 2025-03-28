@@ -76,6 +76,6 @@ window.addEventListener("load", function() {
       setTimeout(() => {
           preloader.style.display = "none"; 
       }, 500); 
-  }, 2000); 
+  }, 500); 
 });
 
